@@ -6,11 +6,12 @@ WORKDIR /home/app/
 COPY package*.json .
 RUN npm install
 
-# Copying the source code to docker image
+# Copying the source code to docker image 
 COPY index.js index.js
 
 COPY Dockerfile Dockerfile
 
+# Exposing the port of the container
 ENV PORT=8000
 EXPOSE 8000
 
